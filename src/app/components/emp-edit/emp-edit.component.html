@@ -1,0 +1,21 @@
+<p>emp-edit works!</p>
+
+<div class="container">
+    <h3>Empolyee Details</h3>
+    <table border="2px">
+        <tr>
+            <td>Name</td>
+            <td>Mail-ID</td>
+            <td>Joining Date</td>
+        </tr>
+        <tr>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.empMailId}}</td>
+            <td>{{emp.empJoiningDate}}</td>
+        </tr>
+    </table>
+    <div>
+        <br>
+        <button (click)="backToView()">close</button>
+    </div>
+</div>

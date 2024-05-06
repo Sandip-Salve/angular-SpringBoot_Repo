@@ -1,0 +1,18 @@
+<p>add-emp works!</p>
+
+<form [formGroup]="myForm" (ngSubmit)="save()">
+  <label for="name">Name:</label>
+  <input type="text" id="empName" formControlName="empName" />
+    <br>
+  <label for="email">Email:</label>
+  <input type="email" id="empMailId" formControlName="empMailId" />
+  <br>
+  <label for="email">Joining Date:</label>
+  <input type="date" id="empJoiningDate" formControlName="empJoiningDate" />
+    <br>
+    <div>
+        <button type="submit" [disabled]="myForm.invalid">Save</button>
+        <button (click)="backToView()">close</button>
+    </div>
+  
+</form>

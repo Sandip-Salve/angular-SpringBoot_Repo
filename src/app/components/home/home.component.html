@@ -1,0 +1,25 @@
+<p>home works!</p>
+
+<div class="container">
+    <div>
+        <button (click)="goToAddEmployee()">Add New Employee</button>
+    </div>
+    <br>
+    <table border="3 px">
+        <tr>
+            <td>Name</td>
+            <td>Mail-ID</td>
+            <td>Joining Date</td>
+        </tr>
+        @for (emp of emps; track $index) {
+            <tr>
+                <td>{{emp.empName}}</td>
+                <td>{{emp.empMailId}}</td>
+                <td>{{emp.empJoiningDate}}</td>
+                <td><button (click)="getView(emp.empId)">view</button></td>
+                <td><button (click)="getUpdate(emp.empId,emp)">edit</button></td>
+                <td><button (click)="getDelete(emp.empId)">delete</button></td>
+            </tr>
+        }
+    </table>
+</div>
